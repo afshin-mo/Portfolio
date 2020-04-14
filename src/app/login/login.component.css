@@ -1,0 +1,26 @@
+.container{
+    padding-top:100px;
+    width:300px;
+    margin:auto;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.header img{
+    width:200px;
+    border-radius: 50%;
+}
+.subHeader{
+    color: gray;
+}
+
+a{
+    font-family:shabnam;
+    color:gray;
+    font-weight: bold;
+}

@@ -1,0 +1,22 @@
+<div class="container">
+
+  <div class="header">
+    <img alt='User Photo' src='assets/images/photo.jpg'>
+    <h3>افشین محمدی</h3>
+    <h4 class='subHeader'>برنامه نویس و توسعه دهنده وب</h4>
+  </div>
+
+  <div class="body">
+    <mat-form-field>
+      <input matInput type='text' placeholder="نام کاربری">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type='text' placeholder="رمز عبور">
+    </mat-form-field>
+    <button mat-button>ورود به عنوان مدیر</button>
+    <p>جهت مشاهده رزومه  لینک زیر را کلیک نمایید</p>
+    <a (click)="onLoginClick()" routerLink="/" routerLinkActive="active" mat-flat-button href="#">ورود به عنوان مهمان</a>
+    
+  </div>
+</div>
+

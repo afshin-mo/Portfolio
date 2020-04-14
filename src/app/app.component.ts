@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthenticationService } from './authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'protfolio';
+  isLoggedIn$:Observable<boolean>;
+  constructor(private authSrv:AuthenticationService){}
+  ngOnInit(){
+    console.log( this.isLoggedIn$);
+    this.isLoggedIn$=this.authSrv.isLoggedIn;
+    console.log( this.isLoggedIn$);
+  }
 }

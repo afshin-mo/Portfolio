@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family:shabnam, Roboto, "Helvetica Neue", sans-serif; }
+@font-face {
+    font-family: Shabnam;
+    src: url('http://fonts.codearena.ir/rastikerdar/shabnam/shabnam.eot');
+    src: url('http://fonts.codearena.ir/rastikerdar/shabnam/shabnam.eot?#iefix') format('embedded-opentype'),
+         url('http://fonts.codearena.ir/rastikerdar/shabnam/shabnam.woff') format('woff'),
+         url('http://fonts.codearena.ir/rastikerdar/shabnam/shabnam.ttf') format('truetype');
+    font-weight: normal;
+  }
+
+input[type="text"]
+{
+    font-size:12px;
+    font-family:shabnam;
+}
+.mat-button, .mat-flat-button{
+    font-size:12px;
+    font-family:shabnam;
+    background: aliceblue;
+    border: solid 1px gray;
+}
+.mat-form-field-label-wrapper{
+    font-size:12px;
+    font-family:shabnam;
+}
+a{
+    font-family:shabnam;
+    color:gray;
+    font-weight: bold;
+}
