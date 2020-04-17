@@ -14,14 +14,19 @@ import { SkillsComponent } from './skills/skills.component';
 import { SkillComponent } from './skill/skill.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainComponent } from './main/main.component';
 import { AuthGuard } from './auth.guard';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { SideMenuComponent } from './side-menu/side-menu.component';
 
 
 const AppRoutes:Routes =[
@@ -43,7 +48,9 @@ const AppRoutes:Routes =[
     SkillsComponent,
     SkillComponent,
     MainComponent,
-    MainNavComponent
+    MainNavComponent,
+    SideMenuComponent,
+
      ],
   imports: [
         RouterModule.forRoot(
@@ -57,6 +64,10 @@ const AppRoutes:Routes =[
     MatFormFieldModule,
     MatCheckboxModule,
     MatInputModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    FlexLayoutModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   exports:[

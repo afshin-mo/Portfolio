@@ -1,13 +1,25 @@
-.mainNav{
+.mainNav {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    font-size:12px;
-    font-family:shabnam;
+    font-size: 12px;
+    font-family: shabnam;
     font-weight: bolder;
     background-color: #EEA200;
 }
-.mainNav a{
+
+.mainNav a {
     padding-left: 50px;
+}
+
+.sideNav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+mat-drawer {
+    position: fixed;
+    background: red;
 }

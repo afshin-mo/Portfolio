@@ -1,8 +1,21 @@
-<div >
-    <div *ngIf="isLoggedIn$ | async">
-        <app-main-nav></app-main-nav>
-    </div>
-    <router-outlet></router-outlet>
-</div>
-
-
+<mat-drawer-container>
+    <mat-drawer #drawer fxHide.gt-sm>
+        <app-side-menu></app-side-menu>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div *ngIf="isLoggedIn$ | async">
+            <mat-toolbar color='primary'>
+                <div fxHide.gt-sm>
+                    <button mat-icon-button (click)='drawer.toggle()'>
+                            <mat-icon>menu</mat-icon>
+                        </button>
+                </div>
+                <a href="#">خانه</a>
+                <div fxFlex fxLayout fxLayoutAlign='center' fxHide.sm>
+                    <app-main-nav></app-main-nav>
+                </div>
+            </mat-toolbar>
+        </div>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
