@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class AuthenticationService {
 
-  private LoggedIn=new BehaviorSubject<boolean>(false);
+  private LoggedIn=new BehaviorSubject<boolean>(true);
 
   get isLoggedIn(){
     return this.LoggedIn.asObservable();

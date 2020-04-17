@@ -1,6 +1,10 @@
 <div class="sideNav">
-    <a routerLink="/about" routerLinkActive="active" href="#">درباه من</a>
-    <a routerLink="/contact" routerLinkActive="active" href="#">ارتباط با من</a>
-    <a routerLink="/projects" routerLinkActive="active" href="#">پروژه های انجام شده</a>
-    <a routerLink="/skills" routerLinkActive="active" href="#">قابلیت ها و مهارتها</a>
+    <a routerLink="/about" (click)="onSidenavClose()" routerLinkActive="active" href="#">
+        <mat-icon>account_box</mat-icon>درباه من</a>
+    <a routerLink="/contact" (click)="onSidenavClose()" routerLinkActive="active" href="#">
+        <mat-icon>phone</mat-icon>ارتباط با من</a>
+    <a routerLink="/projects" (click)="onSidenavClose()" routerLinkActive="active" href="#">
+        <mat-icon>view_list</mat-icon>پروژه های انجام شده</a>
+    <a routerLink="/skills" (click)="onSidenavClose()" routerLinkActive="active" href="#">
+        <mat-icon>check</mat-icon>قابلیت ها و مهارتها</a>
 </div>

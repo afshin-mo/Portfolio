@@ -1,6 +1,6 @@
 <mat-drawer-container>
     <mat-drawer #drawer fxHide.gt-sm>
-        <app-side-menu></app-side-menu>
+        <app-side-menu (sidenavClose)="drawer.toggle()"></app-side-menu>
     </mat-drawer>
     <mat-drawer-content>
         <div *ngIf="isLoggedIn$ | async">
@@ -10,7 +10,8 @@
                             <mat-icon>menu</mat-icon>
                         </button>
                 </div>
-                <a href="#">خانه</a>
+                <a href="#">
+                    <mat-icon>home</mat-icon>خانه</a>
                 <div fxFlex fxLayout fxLayoutAlign='center' fxHide.sm>
                     <app-main-nav></app-main-nav>
                 </div>
